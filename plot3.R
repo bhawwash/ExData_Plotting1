@@ -3,7 +3,7 @@ dat = dat[dat$Date == '1/2/2007' | dat$Date == '2/2/2007',]
 dat$Date = as.character(dat$Date)
 dat$DateTime = as.POSIXct(paste(dat$Date, dat$Time), format="%d/%m/%Y %H:%M:%S")
 
-png(filename="plot3.png")
+png(filename="plot3.png",width=480,height=480)
 plot(x=dat$DateTime,y=as.numeric(as.character(dat$Sub_metering_1)),type="l",xlab="",ylab="Energy sub metering")
 lines(x=dat$DateTime,y=as.numeric(as.character(dat$Sub_metering_2)),col="red")
 lines(x=dat$DateTime,y=as.numeric(as.character(dat$Sub_metering_3)),col="blue")

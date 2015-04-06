@@ -3,7 +3,7 @@ dat = dat[dat$Date == '1/2/2007' | dat$Date == '2/2/2007',]
 dat$Date = as.character(dat$Date)
 dat$DateTime = as.POSIXct(paste(dat$Date, dat$Time), format="%d/%m/%Y %H:%M:%S")
 
-png(filename="plot4.png")
+png(filename="plot4.png",width=480,height=480)
 par(mfrow=c(1,4),mfcol=c(2,2))
 
 plot(x=dat$DateTime,y=as.numeric(as.character(dat$Global_active_power)),
